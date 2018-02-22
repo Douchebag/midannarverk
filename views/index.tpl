@@ -19,7 +19,8 @@
             <a href="company/{{x['company']}}">{{ft[teljari]}}</a>
     </div>
 %   teljari += 1
-%end
+% end
+% end
 </div>
 
 </body>
