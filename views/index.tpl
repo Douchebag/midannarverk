@@ -22,6 +22,25 @@
 % end
 % end
 </div>
+<%
+odyrastb = 1000
+odyrastbfyr = ''
+odyrastd = 1000
+odyrastdfyr = ''
 
+for x in data['results']:
+    if x['bensin95'] < odyrastb:
+        odyrastb = x['bensin95']
+        odyrastbfyr = x['company']
+    if x['diesel'] < odyrastd:
+        odyrastd = x['diesel']
+        odyrastdfyr = x['company']
+    end
+    end
+end
+%>
+<h4>Ódýrasta bensín: <b><i>{{odyrastb}} kr.</i></b> hjá {{odyrastbfyr}}</h4>
+<h4>Ódýrasta díesel: <b><i>{{odyrastd}} kr.</i></b> hjá {{odyrastdfyr}}</h4>
+<h5>Síðast uppfært: 22.02 2018 Kl. 12:45</h5>
 </body>
 </html>
