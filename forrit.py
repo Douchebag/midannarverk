@@ -23,7 +23,6 @@ def server_static(filename):
 
 @error(404)
 def error404(error):
-    return "<h1>Þessi síða fannst ekki</h1>"
+    return "<h1>Þessi síða fannst ekki</h1><br><a href='/'>Heim</a>"
 
-run()
-#run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))

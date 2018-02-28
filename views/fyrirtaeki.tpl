@@ -5,7 +5,7 @@
     <link type="text/css" href="/static/stylesheet.css" rel="stylesheet">
 </head>
 <body>
-<h1>Bensínstöðvar</h1>
+<h1 class="titill">Bensínstöðvar</h1>
 <table>
     <tbody>
         <tr>

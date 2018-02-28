@@ -9,6 +9,17 @@
 </head>
 <body>
 <h1>Söluaðilar eldsneytis á Íslandi</h1>
+<div class="imgwrapper">
+% soluad = []
+% for x in data['results']:
+%   if x['company'] not in soluad:
+%       soluad.append(x['company'])
+%   end
+% end
+% for img in soluad:
+    <img class="myndir" src="/static/{{img}}.png"></img>
+% end
+</div>
 <div>
 % ft = []
 % teljari = 0
@@ -41,6 +52,6 @@ end
 %>
 <h4>Ódýrasta bensín: <b><i>{{odyrastb}} kr.</i></b> hjá {{odyrastbfyr}}</h4>
 <h4>Ódýrasta díesel: <b><i>{{odyrastd}} kr.</i></b> hjá {{odyrastdfyr}}</h4>
-<h5>Síðast uppfært: 22.02 2018 Kl. 12:45</h5>
+<h5>Síðast uppfært: {{data['timestampPriceCheck'][8:10]}}.{{data['timestampPriceCheck'][5:7]}}.{{data['timestampPriceCheck'][0:4]}} Kl. {{data['timestampPriceCheck'][11:16]}}</h5>
 </body>
 </html>
